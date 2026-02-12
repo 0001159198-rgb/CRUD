@@ -3,10 +3,10 @@ package com.senai.crudjavafx.controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.BorderPane;
-
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.application.Platform;
 
 public class MainController {
     @FXML
@@ -30,6 +30,14 @@ public class MainController {
     public void abrirClientes() {
         carregarTela("Clientes.fxml");
     }
+
+    @FXML
+    public void abrirVendas(){carregarTela("Vendas.fxml");}
+
+    @FXML
+    public void fecharPrograma() { Platform.exit(); }
+
+
     @FXML
     public void abrirAjuda(ActionEvent event) {
 
@@ -39,7 +47,7 @@ public class MainController {
         alert.setContentText(
                 "Nome: Sistema de Reservas\n" +
                         "Versão: 1.0.0\n" +
-                        "Desenvolvedor: Marcel Philippe\n" +
+                        "Desenvolvedor: Davi Souza Carmo\n" +
                         "Ano: 2026"
         );
         alert.showAndWait();
@@ -47,7 +55,7 @@ public class MainController {
 
     private void carregarTela(String fxml) {
         try {
-            var url = getClass().getResource("/fxml/" + fxml);
+            var url = getClass().getResource("/com/senai/crudjavafx/" + fxml);
 
             if (url == null) {
                 System.out.println("FXML NÃO ENCONTRADO: " + fxml);

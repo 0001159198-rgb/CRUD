@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.senai.crudjavafx.controller.MainController">
+    <center>
+        <Text fx:id="textoHome" style="-fx-font-size: 24px;" text="Bem-vindo ao Sistema de Vendas!" wrappingWidth="379.0" BorderPane.alignment="CENTER" />
+    </center>
+
+</BorderPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="root" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.senai.crudjavafx.controller.MainController">
+    <top>
+        <MenuBar prefHeight="25.0" prefWidth="800.0">
+            <menus>
+                <Menu text="Home">
+                    <items>
+                        <MenuItem fx:id="btnTelaInicial" onAction="#abrirHome" text="Tela Inicial" />
+                        <MenuItem onAction="#fecharPrograma" text="Sair" />
+                    </items>
+                </Menu>
+                <Menu text="Cadastro">
+                    <items>
+                        <MenuItem onAction="#abrirClientes" text="Clientes" />
+                        <MenuItem onAction="#abrirVendas" text="Vendas" />
+                        <MenuItem onAction="#abrirProdutos" text="Produtos" />
+                    </items>
+                </Menu>
+                <Menu text="Ajuda">
+                    <items>
+                        <MenuItem onAction="#abrirAjuda" text="Sobre o Sistema" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+    </center>
+</BorderPane>
